@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root {
+	/* Primary */
+	--red: hsl(1, 90%, 64%);
+	--blue: hsl(219, 85%, 26%);
+	/* Neutral */
+	--bg-color: hsl(0, 0%, 100%);
+	--very-light-grayish-blue: hsl(210, 60%, 98%);
+	--light-grayish-blue-1: hsl(211, 68%, 94%);
+	--light-grayish-blue-2: hsl(205, 33%, 90%);
+	--grayish-blue: hsl(219, 14%, 63%);
+	--dark-grayish-blue: hsl(219, 12%, 42%);
+	--very-dark-blue: hsl(224, 21%, 14%);
+	--dark-blue: hsl(218, 44%, 22%);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--very-light-grayish-blue);
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 1rem 0.6rem;
+	max-width: 730px;
+	background-color: var(--bg-color);
+	border-radius: 15px;
+}
+
+.head-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0.8rem;
+	padding: 0.6rem 0;
+}
+
+.head-title {
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.notification-number {
+	color: var(--bg-color);
+	background-color: var(--dark-blue);
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	padding: 0 0.5rem;
+	font-size: 18px;
+	margin-left: 0.2em;
+}
+.mark-all {
+	color: var(--dark-blue);
+}
+
+/* section - notification */
+.notification-body {
+	margin: 0.8rem auto;
+	border-radius: 0.5rem;
+}
+
+.notification-box {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	padding: 1.1rem 1.2rem;
+	margin: 0.6rem 1rem;
+}
+
+.photo-contact,
+.photo-club {
+	width: 39px;
+	height: 39px;
+}
+
+.notification-reaction {
+	color: var(--dark-grayish-blue);
+}
+
+.notification-contact {
+	color: var(--very-dark-grey-blue);
+	display: inline-block;
+}
+
+.notification-time {
+	color: var(--grayish-blue);
+}
+
+.notification-group,
+.notification-club,
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.notification-group {
+	color: var(--dark-grayish-blue);
+}
+
+.notification-club,
+a {
+	color: var(--blue);
+}
+
+.text-msg {
+	border: 0.5px solid var(--light-grayish-blue-2);
+	margin-top: 1rem;
+	border-radius: 5px;
+	padding: 1rem;
+	color: #000;
+	cursor: pointer;
+}
+
+.notification-msg {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.photo-club {
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.footer {
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+}
+
+/* active part */
+.unread {
+	background: var(--very-light-grayish-blue);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	cursor: pointer;
+}
+.red-dot {
+	display: inline-block;
+	margin-left: 0.3rem;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--red);
+}
+
+.mark-all,
+.notification-contact,
+.notification-group,
+.notification-club {
+	transition: color 0.5s linear;
+	cursor: pointer;
+}
+
+.mark-all:hover,
+.notification-contact:hover,
+.notification-group:hover,
+.notification-club:hover {
+	color: var(--blue);
+	filter: brightness(1.5);
+}
+.text-msg {
+	transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+.text-msg:hover {
+	background: var(--light-grayish-blue-1);
+	color: var(--dark-grayish-blue);
+}
+
+@media only screen and (min-width: 768px) {
+	body main {
+		margin: 0 auto;
+	}
+	.photo-contact,
+	.photo-club {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.head-title,
+	.notification-number {
+		font-size: 1rem;
+	}
+	.notification-page {
+		padding: 0.4rem 0.2rem;
+	}
+	.notification-body,
+	.mark-all {
+		font-size: 0.8rem;
+	}
+	.notification-box {
+		gap: 5px;
+	}
+	.text-msg {
+		margin-top: 0.4rem;
+		padding: 0.3rem;
+	}
+
+	.footer {
+		font-size: 0.6rem;
+	}
+}
