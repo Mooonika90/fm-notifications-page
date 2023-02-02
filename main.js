@@ -33,7 +33,6 @@ function deleteElement() {
 const handelCount = () => {
 	const unread = document.querySelectorAll('.unread');
 	count = unread.length + 1;
-	console.log(count);
 	if (count > 0) {
 		count--;
 	} else {
