@@ -37,7 +37,7 @@ main {
 	flex-direction: column;
 	margin: 0 auto;
 	padding: 1rem 0.6rem;
-	max-width: 730px;
+	max-width: 700px;
 	background-color: var(--bg-color);
 	border-radius: 15px;
 }
@@ -79,8 +79,8 @@ main {
 	display: flex;
 	align-items: flex-start;
 	gap: 1rem;
-	padding: 1.1rem 1.2rem;
-	margin: 0.6rem 1rem;
+	padding: 1.1rem 0.8rem;
+	margin: 0.8rem 0.6rem;
 }
 
 .photo-contact,
@@ -196,9 +196,6 @@ a {
 	.head-title,
 	.notification-number {
 		font-size: 1rem;
-	}
-	.notification-page {
-		padding: 0.4rem 0.2rem;
 	}
 	.notification-body,
 	.mark-all {
