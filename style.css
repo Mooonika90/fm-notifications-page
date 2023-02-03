@@ -188,6 +188,11 @@ a {
 		height: 45px;
 	}
 }
+@media only screen and (max-width: 576px) {
+	.notification-body {
+		font-size: 0.9rem;
+	}
+}
 @media only screen and (max-width: 375px) {
 	.head-title,
 	.notification-number {
@@ -195,7 +200,7 @@ a {
 	}
 	.notification-body,
 	.mark-all {
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 	}
 	.notification-box {
 		gap: 5px;
